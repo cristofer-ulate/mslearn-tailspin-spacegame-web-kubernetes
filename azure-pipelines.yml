@@ -67,14 +67,14 @@ stages:
               action: createSecret
               secretName: $(imagePullSecret)
               dockerRegistryEndpoint: 'CrisSerCon'
-              kubernetesServiceConnection: 'CrisKubSerCon'
+              kubernetesServiceConnection: 'KubeConfigFile'
               namespace: $(namespace)
 
           - task: KubernetesManifest@0
             displayName: Deploy to Kubernetes cluster
             inputs:
               action: deploy
-              kubernetesServiceConnection: 'CrisKubSerCon'
+              kubernetesServiceConnection: 'KubeConfigFile'
               namespace: $(namespace)
               manifests: |
                 $(Pipeline.Workspace)/manifests/deployment.yml
