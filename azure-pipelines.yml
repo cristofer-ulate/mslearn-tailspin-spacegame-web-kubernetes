@@ -84,3 +84,7 @@ stages:
               containers: |
                 $(RegistryName)/$(webRepository):$(tag)
                 $(RegistryName)/$(leaderboardRepository):$(tag)
+            continueOnError: true
+
+          - publish: '$(Agent.TempDirectory)'
+            artifact: Results
