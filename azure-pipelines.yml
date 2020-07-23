@@ -69,7 +69,7 @@ stages:
               dockerRegistryEndpoint: 'CrisSerCon'
               kubernetesServiceConnection: 'KubeConfigFile'
               namespace: $(namespace)
-            enabled: false
+            enabled: true
 
           - task: KubernetesManifest@0
             displayName: Deploy to Kubernetes cluster
