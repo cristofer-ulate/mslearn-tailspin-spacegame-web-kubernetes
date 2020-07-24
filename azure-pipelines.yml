@@ -82,5 +82,5 @@ stages:
               imagePullSecrets: |
                 $(imagePullSecret)
               containers: |
-                $(RegistryName)/$(webRepository):$(tag)
-#                $(RegistryName)/$(leaderboardRepository):$(tag)
+                tailspinspacegame9781.azurecr.io/web:4323
+                $(RegistryName)/$(leaderboardRepository):$(tag)
