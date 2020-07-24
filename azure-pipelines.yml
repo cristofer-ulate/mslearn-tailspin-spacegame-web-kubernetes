@@ -83,4 +83,4 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(RegistryName)/$(webRepository):$(tag)
-                $(RegistryName)/$(leaderboardRepository):$(tag)
+#                $(RegistryName)/$(leaderboardRepository):$(tag)
