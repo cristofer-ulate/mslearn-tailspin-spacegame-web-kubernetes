@@ -24,4 +24,4 @@ steps:
     command: 'get'
     arguments: 'pods'
     secretType: 'generic'
-    secretName: 'CrisSecret'
+    secretName: 'crissecret'
