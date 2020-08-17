@@ -11,8 +11,17 @@ pool:
   demands: Agent.Name -equals CristoferKubernetesAgent
 
 steps:
+# - task: Kubernetes@1
+#   inputs:
+#     connectionType: 'Kubernetes Service Connection'
+#     kubernetesServiceEndpoint: 'criskubeconfigsercon'
+#     command: 'login'
+
 - task: Kubernetes@1
   inputs:
     connectionType: 'Kubernetes Service Connection'
     kubernetesServiceEndpoint: 'criskubeconfigsercon'
-    command: 'login'
+    command: 'get'
+    arguments: 'pods'
+    secretType: 'generic'
+    secretName: 'CrisSecret'
